@@ -1,4 +1,10 @@
+import 'package:bookia_app/core/functions/navigation.dart';
+import 'package:bookia_app/core/utils/text_style.dart';
+import 'package:bookia_app/feature/profile/presentation/views/update_password_view.dart';
+import 'package:bookia_app/feature/profile/presentation/views/update_profile_view.dart';
+import 'package:bookia_app/feature/profile/presentation/widgets/card_info_widget.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class ProfileView extends StatefulWidget {
   const ProfileView({super.key});
@@ -10,6 +16,106 @@ class ProfileView extends StatefulWidget {
 class _ProfileViewState extends State<ProfileView> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold(body: Center(child: Text('profile')));
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(
+          'Profile',
+          style: getTitleTextStyle(context),
+        ),
+        actions: [
+          IconButton(
+            onPressed: () {},
+            icon: SvgPicture.asset('assets/icons/logout.svg'),
+          ),
+        ],
+      ),
+      body: Center(
+        child: Column(
+          children: [
+            Container(
+              padding: const EdgeInsets.all(8),
+              color: Colors.white,
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  CircleAvatar(
+                    radius: 32,
+                    backgroundColor: Colors.grey[400],
+                  ),
+                  const SizedBox(
+                    width: 10,
+                  ),
+                  const Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    mainAxisSize: MainAxisSize.min,
+                    children: [
+                      Text(
+                        'Abdullah Elmansy',
+                        style: TextStyle(
+                          fontSize: 24,
+                        ),
+                      ),
+                      Text(
+                        'abdullahelmansy183@gmail.com',
+                        style: TextStyle(
+                          fontSize: 16,
+                          color: Colors.grey,
+                        ),
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            CardInfo(
+              title: 'My Orders',
+              onTap: () {},
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            CardInfo(
+              title: 'Edit Profile',
+              onTap: () {
+                push(context, const UpdateProfileView());
+              },
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            CardInfo(
+              title: 'Reset Password',
+              onTap: () {
+                push(context, const UpdatePasswordView());
+              },
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            CardInfo(
+              title: 'FAQ',
+              onTap: () {},
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            CardInfo(
+              title: 'Contact Us',
+              onTap: () {},
+            ),
+            const SizedBox(
+              height: 10,
+            ),
+            CardInfo(
+              title: 'Privacy & Terms',
+              onTap: () {},
+            ),
+          ],
+        ),
+      ),
+    );
   }
 }
