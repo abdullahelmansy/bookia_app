@@ -1,4 +1,3 @@
-
 class LoginModelParams {
   String? email;
   String? password;

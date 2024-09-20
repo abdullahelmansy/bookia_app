@@ -62,9 +62,7 @@ class OPTView extends StatelessWidget {
               style: getSmallTextStyle(context),
             ),
             TextButton(
-              onPressed: () {
-                
-              },
+              onPressed: () {},
               child: Text(
                 'Resend',
                 style:

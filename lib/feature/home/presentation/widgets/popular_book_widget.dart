@@ -23,10 +23,9 @@ class PopularBookWidget extends StatelessWidget {
           ),
           const Gap(15),
           GridView.builder(
-            physics: const NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               shrinkWrap: true,
-              gridDelegate:
-                  const SliverGridDelegateWithFixedCrossAxisCount(
+              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
                 crossAxisCount: 2,
                 mainAxisExtent: 300,
                 crossAxisSpacing: 10,
@@ -63,13 +62,11 @@ class PopularBookWidget extends StatelessWidget {
                       ),
                       const Gap(10),
                       Row(
-                        mainAxisAlignment:
-                            MainAxisAlignment.spaceBetween,
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           Text(
                             '₹285',
-                            style: getTitleTextStyle(context,
-                                fontSize: 16),
+                            style: getTitleTextStyle(context, fontSize: 16),
                           ),
                           CustomButton(
                             color: Colors.black,

@@ -6,12 +6,11 @@ class BackButtonWidegt extends StatelessWidget {
   const BackButtonWidegt({
     super.key,
   });
-  
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap:()=>Navigator.pop(context) ,
+      onTap: () => Navigator.pop(context),
       child: Container(
         width: 41,
         height: 41,

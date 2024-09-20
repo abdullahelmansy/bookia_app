@@ -3,7 +3,8 @@ import 'package:flutter/material.dart';
 class CardInfo extends StatelessWidget {
   const CardInfo({
     super.key,
-    required this.title, required this.onTap,
+    required this.title,
+    required this.onTap,
   });
   final String title;
   final Function() onTap;
